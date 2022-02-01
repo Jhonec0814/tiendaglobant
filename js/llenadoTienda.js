@@ -4,16 +4,16 @@ export function llenarTienda() {
 
     let productos = [
 
-        { foto: 'img/tienda1.jpg', nombre: "Batimovil Escala", precio: 150000, cantidad: 0 },
-        { foto: 'img/tienda2.jpg', nombre: "Camiseta Batman", precio: 50000, cantidad: 0 },
-        { foto: 'img/tienda3.jpg', nombre: "Gorra Batman DC", precio: 25000, cantidad: 0 },
-        { foto: 'img/tienda4.jpg', nombre: "Termo Batman DC", precio: 35500, cantidad: 0 },
-        { foto: 'img/tienda5.jpg', nombre: "Batman v Superman", precio: 95000, cantidad: 0 },
-        { foto: 'img/tienda6.jpg', nombre: "Maleta Batman", precio: 250000, cantidad: 0 },
-        { foto: 'img/tienda7.jpg', nombre: "Silla Batman PRO", precio: 1500000, cantidad: 0 },
-        { foto: 'img/tienda8.jpg', nombre: "Comics Batman", precio: 350000, cantidad: 0 },
-        { foto: 'img/tienda9.jpg', nombre: "Caja sorpresa", precio: 187000, cantidad: 0 },
-        { foto: 'img/tienda10.jpg', nombre: "Lonchera Batman", precio: 70000, cantidad: 0 }
+        { foto: 'img/producto1.png', nombre: "Headphones Logitech", precio: 150000, cantidad: 0 },
+        { foto: 'img/producto2.png', nombre: "keyboard Logitech", precio: 90000, cantidad: 0 },
+        { foto: 'img/producto3.jpg', nombre: "Mouse pad", precio: 35000, cantidad: 0 },
+        { foto: 'img/producto4.png', nombre: "Funko Miss Fortune", precio: 35500, cantidad: 0 },
+        { foto: 'img/producto5.jpg', nombre: "History book Runa Terra", precio: 55000, cantidad: 0 },
+        { foto: 'img/producto6.jpg', nombre: "Case League of legends", precio: 25000, cantidad: 0 },
+        { foto: 'img/producto7.png', nombre: "Earphones KDA", precio: 80000, cantidad: 0 },
+        { foto: 'img/producto8.jpg', nombre: "Mouse pad KDA", precio: 35000, cantidad: 0 },
+        { foto: 'img/producto9.png', nombre: "Headphones KDA", precio: 160000, cantidad: 0 },
+        { foto: 'img/producto10.jpg', nombre: "Figure Tristana", precio: 70000, cantidad: 0 }
 
 
     ]
