@@ -1,47 +1,76 @@
 //Importaciones
 import { llenarTienda } from "./llenadoTienda.js"
 import { ampliarInfoProducto } from "./ampliarInfoProducto.js"
-import { agregarProducto } from "./agregarproducto.js"
-import { verCarrito } from "./vercarrito.js"
+import { agregarCarrito } from "./agregarAlCarrito.js"
 
 
-//Entradas globales
-let modalInfoProducto = new bootstrap.Modal(document.getElementById('modalInfoProducto'))
-let modalCarrito = new bootstrap.Modal(document.getElementById('modalCarrito'))
-let botonAgregarCarrito = document.getElementById("botonAgregarCarrito")
-let filaContenedoraProductos = document.getElementById("fila")
-let botonCarrito = document.getElementById("botonCarrito")
+//VARIABLES GLOBALES DE LA TIENDA
+let producto={}
+let carrito=[]
 
-let carrito = []
-let productoSeleccionado = {}
 
-//Se llena la tienda
+//llamo a la funcion llenartienda
 llenarTienda()
 
-//se detecta clic en algun producto
-filaContenedoraProductos.addEventListener("click", function (event) {
-    productoSeleccionado = ampliarInfoProducto(event)
+//llamo a la funcion ampliarinfoProducto
+
+let modalInfoProducto = new bootstrap.Modal(document.getElementById('modalInfoProducto'))
+
+let listaProductos = document.getElementById("fila")
+listaProductos.addEventListener("click",function(event){
+
+    producto=ampliarInfoProducto(event)
     modalInfoProducto.show()
+
 })
 
-//se detecta clic en agregar producto al carrito
-botonAgregarCarrito.addEventListener("click", function () {
+//Llamo a la funcion agregarAlCarrito
 
-    let cantidad = document.getElementById("cantidadProducto").value
-    productoSeleccionado.cantidad = Number(cantidad)
+let botonAgregarCarrito=document.getElementById("botonAgregarCarrito")
+botonAgregarCarrito.addEventListener("click",function(){
+    
+    let cantidadProducto = document.getElementById("cantidadProducto").value 
+    producto.cantidad=cantidadProducto
 
-    carrito.push(productoSeleccionado)
+    //agrego el producto al carrito
+    carrito.push(producto)
+    
 
-    agregarProducto(carrito)
-
+    //oculto la modal de info producto
     modalInfoProducto.hide()
 
+    //llamar la funcion agregarCarrito
+    agregarCarrito(carrito)
+    console.log(carrito)
+
+
+    
 })
 
-//se detecta clic en el boton ver carrito
-botonCarrito.addEventListener("click", function () {
 
-    modalCarrito.show()
-    verCarrito(carrito)
 
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

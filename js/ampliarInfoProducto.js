@@ -2,14 +2,16 @@
 
 export function ampliarInfoProducto(event) {
 
-    let producto = {}
+     let producto = {}
 
     if (event.target.classList.contains("btn-outline-dark")) {
 
+      
         producto = {
             nombre: event.target.parentElement.querySelector("h5").textContent,
             precio: event.target.parentElement.querySelector("h6").textContent,
-            imagen: event.target.parentElement.querySelector("img").src
+            imagen: event.target.parentElement.querySelector("img").src,
+           descripcion:event.target.parentElement.querySelector("h3").textContent
         }
 
         let nombreProducto = document.getElementById("nombreProducto")
@@ -19,13 +21,14 @@ export function ampliarInfoProducto(event) {
         precioProducto.textContent = producto.precio
 
         let imagenProducto = document.getElementById("imagenProducto")
-        imagenProducto.src = producto.imagen
+        imagenProducto.src = producto.foto
 
-
+        let descripcionProducto = document.getElementById("descripcionProducto")
+        descripcionProducto.textContent = producto.descripcion
 
 
     }
 
-    return producto
+    return (producto)
 
 }

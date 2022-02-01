@@ -30,18 +30,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="index.html">Home</a>
                             </li>
-                            <li>
-                                <a class="nav-link active" aria-current="page" href="tienda.html">Store</a>
-                            </li>
+
                         </ul>
 
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#" id="botonCarrito">
                                     <i class="fas fa-shopping-cart fa-2x"></i>
-                                    <span
-                                        class="invisible position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger"
-                                        id="pildora">
+                                    <span id="pildora" class="invisible position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
                                         99+
                                     </span>
                                 </a>
@@ -78,8 +74,9 @@
                                     <img src="" alt="imagen" class="img-fluid w-100" id="imagenProducto">
                                 </div>
                                 <div class="col-12 col-md-8">
-                                    <h5 class="fw-bold" id="nombreProducto"></h5>
-                                    <h6 class="" id="precioProducto"></h6>
+                                    <h5 class="fw-bold" id="nombreProducto">  </h5>
+                                    <h6 class="" id="precioProducto"> </h6>
+                                    <h6 id="descripcionProducto"> </h6>
                                     <div class="mb-3 mt-5">
                                         <label class="form-label">Cantidad</label>
                                         <input id="cantidadProducto" value="1" type="number" min="1" step="1"
@@ -110,7 +107,18 @@
                     </div>
                     <div class="modal-body">
                         <div class="container" id="resumen">
-
+                            <div class="col-12 col-md-4">
+                                <img src="img/producto1.png" alt="" class="img-fluid w-100" id="imagenProducto" >
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <h5 id="nombreProducto">Nombre Producto</h5>
+                                <h5 id="precioProducto">Precio</h5>
+                                <h6 id="descripcionProducto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+                                <div class="mb-3">
+                                    <label class="form-label">Amount</label>
+                                    <input type="number" class="form-control" id="cantidadProducto" value="1" min="0">
+                                </div>
+                            </div>
                         </div>
                         <div class="container">
                             <div class="row">

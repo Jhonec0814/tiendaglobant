@@ -4,19 +4,21 @@ export function llenarTienda() {
 
     let productos = [
 
-        { foto: 'img/producto1.png', nombre: "Headphones Logitech", precio: 150000, cantidad: 0 },
-        { foto: 'img/producto2.png', nombre: "keyboard Logitech", precio: 90000, cantidad: 0 },
-        { foto: 'img/producto3.jpg', nombre: "Mouse pad", precio: 35000, cantidad: 0 },
-        { foto: 'img/producto4.png', nombre: "Funko Miss Fortune", precio: 35500, cantidad: 0 },
-        { foto: 'img/producto5.jpg', nombre: "History book Runa Terra", precio: 55000, cantidad: 0 },
-        { foto: 'img/producto6.jpg', nombre: "Case League of legends", precio: 25000, cantidad: 0 },
-        { foto: 'img/producto7.png', nombre: "Earphones KDA", precio: 80000, cantidad: 0 },
-        { foto: 'img/producto8.jpg', nombre: "Mouse pad KDA", precio: 35000, cantidad: 0 },
-        { foto: 'img/producto9.png', nombre: "Headphones KDA", precio: 160000, cantidad: 0 },
-        { foto: 'img/producto10.jpg', nombre: "Figure Tristana", precio: 70000, cantidad: 0 }
+        { foto: '../img/producto1.png ', nombre: "Headphones Logitech", precio: 150000, cantidad: 0, descripcion:"me cago en todo en headphones" },
+        { foto: 'img/producto2.png', nombre: "keyboard Logitech", precio: 90000, cantidad: 0 , descripcion:"me cago en todo"},
+        { foto: 'img/producto3.jpg', nombre: "Mouse pad", precio: 35000, cantidad: 0, descripcion:"me cago en todo" },
+        { foto: 'img/producto4.png', nombre: "Funko Miss Fortune", precio: 35500, cantidad: 0, descripcion:"me cago en todo" },
+        { foto: 'img/producto5.jpg', nombre: "History book Runa Terra", precio: 55000, cantidad: 0 , descripcion:"me cago en todo"},
+        { foto: 'img/producto6.jpg', nombre: "Case League of legends", precio: 25000, cantidad: 0, descripcion:"me cago en todo" },
+        { foto: 'img/producto7.png', nombre: "Earphones KDA", precio: 80000, cantidad: 0, descripcion:"me cago en todo" },
+        { foto: 'img/producto8.jpg', nombre: "Mouse pad KDA", precio: 35000, cantidad: 0 , descripcion:"me cago en todo"},
+        { foto: 'img/producto9.png', nombre: "Headphones KDA", precio: 160000, cantidad: 0, descripcion:"me cago en todo" },
+        { foto: 'img/producto10.jpg', nombre: "Figure Tristana", precio: 70000, cantidad: 0 , descripcion:"me cago en todo"}
 
 
     ]
+
+    let fila = document.getElementById("fila")
 
     productos.forEach(function (producto) {
 
@@ -32,15 +34,24 @@ export function llenarTienda() {
         imagen.classList.add("p-4")
         imagen.src = producto.foto
 
+        
+        let nombre = document.createElement("h5")
+        nombre.classList.add("fw-bold")
+        nombre.classList.add("text-center")
+        nombre.textContent = producto.nombre
+
+        let descripcionProducto = document.createElement("h3")
+        descripcionProducto.classList.add("invisible")
+        descripcionProducto.classList.add("h3")
+        descripcionProducto.classList.add("text-center")
+        descripcionProducto.textContent =producto.descripcion
+
+
         let separador = document.createElement("hr")
         separador.classList.add("w-75")
         separador.classList.add("mx-auto")
         separador.classList.add("d-block")
 
-        let nombre = document.createElement("h5")
-        nombre.classList.add("fw-bold")
-        nombre.classList.add("text-center")
-        nombre.textContent = producto.nombre
 
         let precio = document.createElement("h6")
         precio.classList.add("text-center")
@@ -58,8 +69,10 @@ export function llenarTienda() {
         tarjeta.appendChild(imagen)
         tarjeta.appendChild(separador)
         tarjeta.appendChild(nombre)
+        tarjeta.appendChild(descripcionProducto)
         tarjeta.appendChild(precio)
         tarjeta.appendChild(botonVerProducto)
+        
 
 
         columna.appendChild(tarjeta)
