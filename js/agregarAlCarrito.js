@@ -7,14 +7,26 @@ export function agregarCarrito(carrito){
     pildora.classList.remove("invisible")
 
     
-    let contador=0
+    let cantidad=0
+
+    
+
     carrito.forEach(function(producto){
 
-        contador=contador+1
-        producto.cantidad
+        cantidad = cantidad+Number(producto.cantidad)
 
-        console.log(contador)
         
     })
+
+    pildora.textContent=cantidad
+    pildora.classList.remove("invisible")
+
+
+    // Rutina para recorrer el carrito y sumar las cantidades de cada producto
+
+  
+
+    
+    
 
 }

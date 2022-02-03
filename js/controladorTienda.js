@@ -2,6 +2,7 @@
 import { llenarTienda } from "./llenadoTienda.js"
 import { ampliarInfoProducto } from "./ampliarInfoProducto.js"
 import { agregarCarrito } from "./agregarAlCarrito.js"
+import {verCarrito} from "./verCarrito.js"
 
 
 //VARIABLES GLOBALES DE LA TIENDA
@@ -41,24 +42,30 @@ botonAgregarCarrito.addEventListener("click",function(){
 
     //llamar la funcion agregarCarrito
     agregarCarrito(carrito)
-    console.log(carrito)
+  
 
 
     
 })
 
 
+// llamo a la funcion ver carrito
+let botonVerCarrito = document.getElementById("botonCarrito")
+botonVerCarrito.addEventListener("click",function(){
+    verCarrito(carrito)
+})
 
 
 
+// detectar clic en el boton limpiar
 
+let botonLimpiar = document.getElementById("clean")
+botonLimpiar.addEventListener("click",function(){
 
+    let contenedorModal=document.getElementById("contenedorCarrito")
+    contenedorModal.innerHTML=""
 
-
-
-
-
-
+})
 
 
 

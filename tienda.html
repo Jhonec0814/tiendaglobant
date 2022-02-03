@@ -18,7 +18,7 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
                         League of legends
-                        <img src="img/logo.png" alt="" width="25" height="24">
+                        <img src="img/logoriot.png" alt="" width="90" height="30">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -71,14 +71,14 @@
                         <div class="container" id="producto">
                             <div class="row">
                                 <div class="col-12 col-md-4">
-                                    <img src="" alt="imagen" class="img-fluid w-100" id="imagenProducto">
+                                    <img src="img/producto1.png" alt="imagen" class="img-fluid w-100" id="imagenProducto">
                                 </div>
                                 <div class="col-12 col-md-8">
                                     <h5 class="fw-bold" id="nombreProducto">  </h5>
                                     <h6 class="" id="precioProducto"> </h6>
                                     <h6 id="descripcionProducto"> </h6>
                                     <div class="mb-3 mt-5">
-                                        <label class="form-label">Cantidad</label>
+                                        <label class="form-label">Amount</label>
                                         <input id="cantidadProducto" value="1" type="number" min="1" step="1"
                                             class="form-control">
                                     </div>
@@ -87,8 +87,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-dark" id="botonAgregarCarrito">agregar al carrito</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-dark" id="botonAgregarCarrito">Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -98,46 +98,28 @@
 
     <section>
         <!-- Modal -->
-        <div class="modal fade" id="modalCarrito">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header bg-primary">
-                        <h5 class="modal-title">Tienda League of legends</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container" id="resumen">
-                            <div class="col-12 col-md-4">
-                                <img src="img/producto1.png" alt="" class="img-fluid w-100" id="imagenProducto" >
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <h5 id="nombreProducto">Nombre Producto</h5>
-                                <h5 id="precioProducto">Precio</h5>
-                                <h6 id="descripcionProducto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
-                                <div class="mb-3">
-                                    <label class="form-label">Amount</label>
-                                    <input type="number" class="form-control" id="cantidadProducto" value="1" min="0">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <hr>
-                                    <h4 id="total" class="fw-bold"></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Limpiar Carrito</button>
-                        <button type="button" class="btn btn-dark">Comprar</button>
-                    </div>
-                </div>
-            </div>
+<div class="modal fade" id="modalVerCarrito" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">League of leguends store</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <div class="container" id="contenedorCarrito">
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="clean">Clean Cart</button>
+          <button type="button" class="btn btn-primary">Buy in Usd!</button>
+          <button type="button" class="btn btn-primary">Buy now!</button>
+        </div>
+      </div>
+    </div>
+  </div>
     </section>
-
 
     <script src="js/controladorTienda.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
