@@ -44,26 +44,37 @@ botonAgregarCarrito.addEventListener("click",function(){
     agregarCarrito(carrito)
   
 
-
+    cantidadProducto = document.getElementById("cantidadProducto").value=1 
     
 })
 
 
 // llamo a la funcion ver carrito
 let botonVerCarrito = document.getElementById("botonCarrito")
+let modalVerCarrito = new bootstrap.Modal(document.getElementById('modalVerCarrito'))
 botonVerCarrito.addEventListener("click",function(){
     verCarrito(carrito)
+    modalVerCarrito.show()
 })
 
 
 
-// detectar clic en el boton limpiar
+// detectar clic en el boton limpiar - Funcion limpiar
 
 let botonLimpiar = document.getElementById("clean")
 botonLimpiar.addEventListener("click",function(){
 
-    let contenedorModal=document.getElementById("contenedorCarrito")
+    let contenedorModal = document.getElementById("contenedorCarrito")
+
     contenedorModal.innerHTML=""
+    carrito = []
+
+    let pildora = document.getElementById("pildora")
+    pildora.innerHTML=""
+    pildora = []
+
+
+    modalVerCarrito.hide()
 
 })
 

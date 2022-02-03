@@ -1,11 +1,9 @@
 export function verCarrito(carrito){
 
-    let modalVerCarrito = new bootstrap.Modal(document.getElementById('modalVerCarrito'))
-
 
     let contenedor = document.getElementById("contenedorCarrito")
     contenedor.innerHTML=""
-
+    let total=0 , totalfinal=0
     
     carrito.forEach(function(producto){
 
@@ -35,27 +33,32 @@ export function verCarrito(carrito){
         cantidadProducto.textContent = producto.cantidad
         cantidadProducto.textContent =  producto.cantidad + " Und" 
 
+        let separador = document.createElement("hr")
+
+        total = total+(Number(producto.precio)*Number(producto.cantidad))
+        console.log((producto.precio))
+        console.log(Number(producto.cantidad))
         // Padres e hijos
 
         columna1.appendChild(fotoProducto)
-
         fila.appendChild(columna1)
         fila.appendChild(columna2)
-
-        
         columna2.appendChild(nombreProducto)
-        
         columna2.appendChild(precioProducto)
         columna2.appendChild(cantidadProducto)
-
+        columna2.appendChild(separador)
         contenedor.appendChild(fila)
+
     })
 
 
+    totalfinal= document.createElement("h5")
+    totalfinal.textContent=total
+
+    contenedor.appendChild(totalfinal)
 
 
 
-
-    modalVerCarrito.show()
+   
 
 }

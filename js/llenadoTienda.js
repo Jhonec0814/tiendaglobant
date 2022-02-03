@@ -57,7 +57,7 @@ export function llenarTienda() {
         let precio = document.createElement("h6")
         precio.classList.add("text-center")
         precio.textContent = producto.precio
-        precio.textContent = "$" + producto.precio
+        precio.textContent = producto.precio
 
         let botonVerProducto = document.createElement("button")
         botonVerProducto.classList.add("m-2")
