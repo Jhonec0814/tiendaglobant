@@ -3,7 +3,7 @@ export function verCarrito(carrito){
 
     let contenedor = document.getElementById("contenedorCarrito")
     contenedor.innerHTML=""
-    let total=0 , totalfinal=0
+    let total=0 , totalfinal=0, totalUS=0, totalUSfinal=0;
     
     carrito.forEach(function(producto){
 
@@ -38,6 +38,10 @@ export function verCarrito(carrito){
         total = total+(Number(producto.precio)*Number(producto.cantidad))
         console.log((producto.precio))
         console.log(Number(producto.cantidad))
+
+        totalUS = totalUS+(Number(producto.precio)*Number(producto.cantidad))
+        console.log((producto.precio))
+        console.log(Number(producto.cantidad))
         // Padres e hijos
 
         columna1.appendChild(fotoProducto)
@@ -57,6 +61,8 @@ export function verCarrito(carrito){
 
     contenedor.appendChild(totalfinal)
 
+    totalUSfinal = document.createElement("h5")
+    totalUSfinal.textContent=totalUS
 
 
    

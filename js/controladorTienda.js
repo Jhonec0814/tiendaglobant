@@ -21,7 +21,10 @@ let listaProductos = document.getElementById("fila")
 listaProductos.addEventListener("click",function(event){
 
     producto=ampliarInfoProducto(event)
-    modalInfoProducto.show()
+    if (event.target.classList.contains("btn")){
+        modalInfoProducto.show()
+    }
+    
 
 })
 

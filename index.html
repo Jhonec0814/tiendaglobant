@@ -43,7 +43,7 @@
   <main>
 
     <section>
-      <img src="img/dianafondo.jpg" alt="batman" class="img-fluid w-100">
+      <video controls loop src="img/giflol.webm" alt="fondo" class="" muted autoplay >
     </section>
 
     <div class="wow container mt-5 animate__animated animate__fadeInUp">
@@ -69,25 +69,30 @@
     <section class="mt-5 p-3">
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Registration</h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-            etc.
+          <div class="container">
+
+            <img src="img/evelyngif.gif" alt="altofoto" class="w-100 img-fluid mb-3">
+
+            <form>
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailbox">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordbox">
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="botonregistro">Sing up</button>
+
+            </form>
+
           </div>
-          <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-bs-toggle="dropdown">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -177,6 +182,8 @@
   <script>
     new WOW().init();
   </script>
+  <script src="js/firebase.js" type="module" ></script>
+  <script src="js/registrarusuario.js" type="module"></script>
 
 </body>
 
