@@ -3,6 +3,16 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 
 // 1. Para registrar a una persona en su app
 let botonRegistro =document.getElementById("botonregistro")
+
+//1.1 referencia(variable) global a la ventana modal
+
+let modalLogin = new bootstrap.Modal(document.getElementById('modallogin'))
+
+let mensajeLogin = document.getElementById("mensajelogin")
+
+
+
+
 botonRegistro.addEventListener("click",function(event){
     // esto es para preevenir la accion de defecto de reiniciar la pagina
     event.preventDefault()
@@ -25,12 +35,16 @@ botonRegistro.addEventListener("click",function(event){
     // Signed in
     const user = userCredential.user;
     // ...
+    mensajeLogin.textContent="Exito en el registro. ¡Bienvenido!"
+    modalLogin.show()
     console.log("todo bien mi pae")
     })
     .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
+    mensajeLogin.textContent=`Error: ${errorCode} : ${errorMessage}` 
+    modalLogin.show()
     console.log("error motherfucker :V")
     });
 
