@@ -4,6 +4,20 @@ export function verCarrito(carrito){
     let contenedor = document.getElementById("contenedorCarrito")
     contenedor.innerHTML=""
     let total=0 , totalfinal=0, totalUS=0, totalUSfinal=0;
+
+    if(carrito.length ===0){
+
+        let columna1 = document.createElement("div")
+        columna1.classList.add("col-12")
+
+        let imagen = document.createElement("img")
+        imagen.classList.add("img-fluid")
+        imagen.classList.add("w-100")
+        imagen.src= "./img/carrito_vacio.png"
+
+    }else{
+
+    
     
     carrito.forEach(function(producto){
 
@@ -36,8 +50,7 @@ export function verCarrito(carrito){
         let separador = document.createElement("hr")
 
         total = total+(Number(producto.precio)*Number(producto.cantidad))
-        console.log((producto.precio))
-        console.log(Number(producto.cantidad))
+        
 
         totalUS = totalUS+(Number(producto.precio)*Number(producto.cantidad))
         console.log((producto.precio))
@@ -59,12 +72,15 @@ export function verCarrito(carrito){
     totalfinal= document.createElement("h5")
     totalfinal.textContent=total
 
+    totalUSfinal = document.createElement("h5")
+    totalUSfinal.textContent=totalUS
+
     contenedor.appendChild(totalfinal)
 
     totalUSfinal = document.createElement("h5")
     totalUSfinal.textContent=totalUS
 
-
+    }
    
 
 }

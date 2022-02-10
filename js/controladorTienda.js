@@ -81,7 +81,20 @@ botonLimpiar.addEventListener("click",function(){
 
 })
 
+let botonUS = document.getElementById("priceus")
+botonUS.addEventListener("click",function(){
 
+    let contenedorModal = document.getElementById("contenedorCarrito")
+    
+    contenedorModal.innerText="conchatyumadsre"
+    let totalUS = document.getElementById("totalus")
+    totalUS = []
+
+
+    
+
+
+})
 
 
 
