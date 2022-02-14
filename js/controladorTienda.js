@@ -76,25 +76,18 @@ botonLimpiar.addEventListener("click",function(){
     pildora.innerHTML=""
     pildora = []
 
-
+    let totaluslimpiar = document.getElementById("priceus")
+    totaluslimpiar.innerHTML="$Buy in Usd!"
+    totaluslimpiar = []
+    
     modalVerCarrito.hide()
 
 })
 
-let botonUS = document.getElementById("priceus")
-botonUS.addEventListener("click",function(){
-
-    let contenedorModal = document.getElementById("contenedorCarrito")
-    
-    contenedorModal.innerText="conchatyumadsre"
-    let totalUS = document.getElementById("totalus")
-    totalUS = []
-
 
     
+   
 
-
-})
 
 
 
